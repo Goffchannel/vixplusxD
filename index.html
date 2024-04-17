@@ -676,7 +676,7 @@ function eventos() {
     var x = Math.random().toString(36).substring(7);
 
     $.ajax({
-        url: "https://corsproxy.io/?url=https://sd.nerxel.com/eventos-json/vix.json?" + x,
+        url: "https://corsproxy.io/?url=https://todopelotatv.live/json/vixplus.json?" + x,
         type: "get",
         success: function (arr) {
             var content = '';
@@ -692,7 +692,7 @@ function eventos() {
                     console.log(furl);
                     // console.log('Link está listo: ' + furl);
                     // Concatenamos link ya tratado
-                    url = "https://goffchannel.github.io/vixplusxD/reproductorvix.html?get=" + furl;
+                    url = "https://playcanales.online/EventosVIX/reproductorvix.html?get=" + furl;
                 } else {
                     // console.log('Link no está listo: ' + url);
                 }
@@ -715,7 +715,7 @@ function eventos() {
                 // Construir la URL con el título incluido
                 url += "&title=" + escapedTitle;
 
-                content += '<div class="col-md-3 col-lg-4 mycard"><div class="no-section no-mt-2"><a href="' + url + '"><div class="card"><img src="' + obj['img'] + '" alt="VIX+" style="width:100%" class="w3-hover-opacity" /><div class="card-body">' + hora + '<h3>' + title + '</h3><h5 class="card-subtitle">' + obj['description'] + '</h5></div></div></a></div></div>';
+                content += '<div class="col-md-3 col-lg-4 mycard"><div class="no-section no-mt-2"><a href="' + url + '"><div class="card"><img src="' + obj['img'] + '" alt="VIX+" style="width:100%" class="w3-hover-opacity" /><div class="card-body">' + hora + '<h3>' + title + '</h3><h5 class="card-subtitle">' + obj['league'] + '</h5></div></div></a></div></div>';
             }
             $("#eventos").html(content);
             guardaHorario();
